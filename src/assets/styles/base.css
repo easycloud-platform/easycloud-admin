@@ -1,0 +1,250 @@
+/*添加element中massage组件的全局样式，因为rem插件污染其默认的font-size，不加这个样式，message的图标会特别大*/
+.el-message__icon {
+	font-size: 16px;
+}
+.el-dialog__wrapper {
+    font-family:PingFangSC;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+}
+.el-message-box {
+    font-family:PingFangSC;
+    display: inline-block;
+    width: 420px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    font-size: 18px;
+    -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    text-align: left;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.el-message-box__title {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #152C4C !important;
+    font-weight: 600;
+}
+.el-message-box__message p {
+    margin: 0;
+    color: #152C4C !important;
+    line-height: 24px;
+}
+/*消息框 end*/
+/*按钮 start*/
+.el-button--primary {
+    color: #fff;
+    background-color: #003E8F !important;
+    border-color: #003E8F !important;
+}
+/*按钮 end*/
+
+/*分页 start*/
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #003E8F !important;
+    color: #FFF !important;
+}
+/*分页 end*/
+/*抽屉 start*/
+/* .el-drawer.ltr, .el-drawer.rtl, .el-drawer__container {
+    top: 0.3rem !important;
+    bottom: 0;
+    height: 96% !important;
+} */
+.el-drawer {
+    font-size: 16px !important;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+}
+
+.el-drawer__header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #003E8F;
+    color: #FFFFFF  !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0px !important;
+    padding: 10px 10px 10px !important;
+}
+/* .el-drawer__open .el-drawer.rtl {
+    -webkit-animation: rtl-drawer-in 225ms cubic-bezier(0,0,.2,1) 0s;
+    animation: rtl-drawer-in 225ms cubic-bezier(0,0,.2,1) 0s;
+    height: calc(100% - .6rem);
+} */
+
+/*抽屉 end*/
+/*Tab start*/
+
+.el-tabs__header {
+    padding: 0px !important;
+    position: relative;
+    font-family:PingFangSC;
+    font-weight: 600;
+    margin: 0 0 0px auto !important;
+}
+
+.el-tabs__content {
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+}
+/*Tab end*/
+
+/*modal start*/
+.v-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0 !important;
+    background: #000;
+}
+/*modal end*/
+/*dialog start*/
+.container .el-dialog__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+}
+/*dialog end*/
+/*datepicker*/
+.el-date-editor.el-input, .el-date-editor.el-input__inner {
+    width: 300px;
+    float: right;
+    height: 100%;
+}
+.el-input__icon {
+    height: 100%;
+    width: 0px;
+    text-align: center;
+    color:rgb(29, 28, 28) !important;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    line-height: 40px;
+}
+.el-input__prefix {
+    left: -15px !important;
+ 
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    
+}
+.el-input--prefix .el-input__inner {
+    padding-left: 30px;
+    font-family:PingFangSC;
+    font-weight:600;
+    font-size: 13px;
+    color:rgb(97, 96, 96);
+    line-height:25px;
+    letter-spacing:0rem;
+}
+/*datepicker*/
+
+.el-carousel__indicators--outside button {
+    background-color: #003E8F;
+    opacity: .24;
+}
+.el-card__body {
+    padding: 30px;
+}
+
+.el-link.el-link--default:hover {
+    color: #003E8F !important;
+}
+.el-link.is-underline:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    bottom: 0;
+    border-bottom: 1px solid #003E8F !important;
+}
+.el-link.el-link--default:after, .el-link.el-link--primary.is-underline:hover:after, .el-link.el-link--primary:after {
+    border-color: #003E8F !important;
+}
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+    margin: 0 5px;
+    background-color: rgba(255,255,255,1) !important;
+    color: #000000 !important;
+    min-width: 30px;
+    border-radius: 2px;
+}
+
+.el-input__inner {
+    -webkit-appearance: none;
+    background-color: transparent !important;
+    background-image: none;
+    border-radius: 0px !important;
+    border: 0px solid #DCDFE6 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: rgb(97, 96, 96) !important;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+}
+
+.el-select {
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+.el-select .el-input__inner {
+    cursor: pointer;
+    padding-right: 35px;
+    font-family: PingFangSC !important;
+    font-weight: 600 !important;
+}
+.el-link.el-link--default {
+    color: black;
+}
+
+.amap-logo {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    display: none;
+    z-index: 160;
+    height: 20px;
+}
+
