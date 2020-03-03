@@ -37,13 +37,13 @@
         checkItemStyle: '2px solid rgb(0, 87, 168);',
         uncheckItemStyle: '',
         selectItem: {
-          pid: 'home',
-          id: 'home'
+          pid: 'index',
+          id: 'index'
         },
         menuList: [ 
           {
-            id: 'home',
-            pid: 'home',
+            id: 'index',
+            pid: 'index',
             name: '主页',
             children: []
           }, 
@@ -73,24 +73,28 @@
                 id: 'type',
                 pid: 'app',
                 name: '品种分类',
+                style: 'icon-child',
                 children: []
               }, 
               {
                 id: 'question',
                 pid: 'app',
                 name: '常见问题',
+                style: 'icon-child',
                 children: []
               }, 
                {
                 id: 'health',
                 pid: 'app',
                 name: '健康疾病',
+                style: 'icon-child',
                 children: []
               }, 
               {
                 id: 'knowledge',
                 pid: 'app',
                 name: '养猫科普',
+                style: 'icon-child',
                 children: []
               }, 
             ]
@@ -103,12 +107,14 @@
                 id: 'storeVertify',
                 pid: 'store',
                 name: '商家审核',
+                style: 'icon-child',
                 children: []
               }, 
               {
                 id: 'storeManager',
                 pid: 'store',
                 name: '入驻管理',
+                style: 'icon-child',
                 children: []
               }, 
             ]
@@ -121,59 +127,61 @@
                 id: 'log',
                 pid: 'system',
                 name: '日志中心',
+                style: 'icon-child',
                 children: []
               }, 
               {
                 id: 'service',
                 pid: 'system',
                 name: '服务状态',
+                style: 'icon-child',
                 children: []
               }, 
             ]
           }, 
           {
             id: 'compannt',
-            name: '组件库',
+            name: '常用页面',
             children: [
-              {
-                id: 'page',
-                pid: 'compannt',
-                name: '分页',
-                children: []
-              }, 
               {
                 id: 'table',
                 pid: 'compannt',
-                name: '表格',
+                style: 'icon-child',
+                name: '表格查询分页',
                 children: []
               }, 
               {
                 id: 'button',
                 pid: 'compannt',
                 name: '按钮',
+                style: 'icon-child',
                 children: []
               },
               {
                 id: 'draw',
                 pid: 'compannt',
                 name: '抽屉',
+                style: 'icon-child',
                 children: []
               },  
                {
                 id: 'tab',
                 pid: 'compannt',
                 name: 'Tab',
+                style: 'icon-child',
                 children: []
               },  {
                 id: 'notify',
                 pid: 'compannt',
                 name: '消息提醒',
+                style: 'icon-child',
                 children: []
               }, 
               {
                 id: 'breadcrumb',
                 pid: 'compannt',
                 name: '面包屑',
+                style: 'icon-child',
                 children: []
               }, 
             ]
@@ -210,9 +218,10 @@
             e.currentTarget.parentNode.querySelector('.up-item').className = 'down-item'
           }
         } else {
+           this.selectItem.pid = item.pid
+           this.selectItem.id = item.id
           if (item.children) {
-            this.selectItem.pid = item.id
-            this.selectItem.id = ''
+
             if (!item.id.endsWith('none')) {
               router.push({name: item.id})
             } else {
@@ -223,8 +232,7 @@
               });
             }
           } else {
-            this.selectItem.pid = item.pid
-            this.selectItem.id = item.id
+
             if (!item.id.endsWith('none')) {
                 router.push({name: item.id})
             } else {
@@ -238,8 +246,10 @@
       },
      
     },
-    created () {
+     computed: {
 
+        },
+    created () {
 
     },
     mounted () {

@@ -18,7 +18,7 @@ import drawer from '@/components/drawer/drawer'
         drawer
     },
     created(){
-        console.log('页面开始进行缓存')
+
     },
     mounted() {
       
